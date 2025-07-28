@@ -4,6 +4,7 @@ import { CalendarCheck, ClipboardList, Dna, Heart, Pill, User } from "lucide-rea
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import WhyGenpowerx from "./why_genepowerx";
+import HealthStatsCarousel from "./caraousel_play";
 import {Link} from "react-router-dom";
 const data = [
     {
@@ -117,6 +118,12 @@ export default function ExploreProgram() {
                     </Badge>
 
                 </div> */}
+<HealthStatsCarousel/>
+<div className="mt-12 text-center space-y-5">
+© 2025 GenepoweRx.com
+</div>
+
+
             </div>
         </section>
     );
