@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://appointment-booking-tk2o.onrender.com/api';
+const API_BASE_URL = 'https://khdreamlifestylerxprogram.onrender.com/api';
 
 export interface TimeSlot {
   start: string;
