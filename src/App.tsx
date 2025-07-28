@@ -96,7 +96,7 @@ function App() {
             {/* <h1 className="text-3xl font-bold text-gray-800">Genepowerx</h1> */}
           </div>
           <h2 className="text-3xl md:text-4xl  font-bold text-center text-gray-700 mb-6 " style={{ fontFamily: "'Delius', cursive" }}>
-            K & H LifestyleRx Pogram
+            K & H LifestyleRx Program
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Book your appointment easily with our streamlined booking system.
