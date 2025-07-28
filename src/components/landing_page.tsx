@@ -13,7 +13,7 @@ export default function Landing() {
                     className="mx-auto w-[280px] h-auto"
                 />
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 " style={{ fontFamily:"'Delius', cursive" }}>
-                    K & H LifestyleRx Pogram
+                    K & H LifestyleRx Program
                     </h2>
                 <p className="text-lg mt-4 font-medium">
                     Tired of treating symptoms instead of causes? Discover how your DNA and lifestyle can transform your health journey.
