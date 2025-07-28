@@ -89,14 +89,14 @@ const transporter = nodemailer.createTransport({
 
 async function sendConfirmationEmail_Doctor(email, name, date, time, appointmentMode) {
   const mailOptions = {
-    from: `"GenepowerX Clinic" <${process.env.EMAIL_USER}>`,
+    from: `"GenepoweRx Clinic" <${process.env.EMAIL_USER}>`,
     to: `${DOCTOR_EMAIL1}, ${DOCTOR_EMAIL2}, ${DOCTOR_EMAIL3}`,
     subject: `📅 New Appointment Booked – ${name} on ${date}`,
     html: `
       <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
         <h2 style="color: #0f62fe;">New Appointment Alert 🚨</h2>
         <p>Dear Doctor,</p>
-        <p>A new appointment has been booked via the <strong>GenepowerX Clinic</strong> system. Please find the patient and appointment details below:</p>
+        <p>A new appointment has been booked. Please find the patient and appointment details below:</p>
 
         <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px;">
           <tr>
@@ -122,7 +122,7 @@ async function sendConfirmationEmail_Doctor(email, name, date, time, appointment
         </table>
 
         <p>Regards,</p>
-        <p><strong>GenepowerX Admin Team</strong><br/>
+        <p><strong>GenepoweRx Admin Team</strong><br/>
         📍 Suit #2B, Plot No.240, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
         📞 +91-95022 22300<br/>
         🔗 <a href="https://genepowerx.com/" target="_blank">https://genepowerx.com</a>
@@ -136,14 +136,14 @@ async function sendConfirmationEmail_Doctor(email, name, date, time, appointment
 
 async function sendConfirmationEmail_Patient(email, name, date, time, appointmentMode) {
   const mailOptions = {
-    from: `"GenepowerX Clinic" <${process.env.EMAIL_USER}>`,
+    from: `"GenepoweRx Clinic" <${process.env.EMAIL_USER}>`,
     to: `${email}`,
-    subject: 'Your Appointment Confirmation with GenepowerX',
+    subject: 'Your Appointment Confirmation with GenepoweRx',
     html: `
       <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
         <h2 style="color: #0f62fe;">Appointment Confirmed ✅</h2>
         <p>Dear <strong>${name}</strong>,</p>
-        <p>Thank you for booking your appointment with <strong>GenepowerX Clinic</strong>. We're pleased to confirm the details below:</p>
+        <p>Thank you for booking your appointment with <strong>GenepoweRx Clinic</strong>. We're pleased to confirm the details below:</p>
 
         <table style="border-collapse: collapse; margin-top: 10px; margin-bottom: 20px;">
           <tr>
@@ -174,7 +174,7 @@ async function sendConfirmationEmail_Patient(email, name, date, time, appointmen
         <p style="margin-top: 20px;">We look forward to seeing you!</p>
 
         <p>Warm regards,</p>
-        <p><strong>GenepowerX Clinic</strong><br/>
+        <p><strong>GenepoweRx Clinic</strong><br/>
         📍 Suit # 2B, Plot No.240, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
         📞 +91-95022 22300<br/>
         ⛓️‍💥https://genepowerx.com/
