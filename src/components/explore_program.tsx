@@ -4,6 +4,7 @@ import { CalendarCheck, ClipboardList, Dna, Heart, Pill, User } from "lucide-rea
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import WhyGenpowerx from "./why_genepowerx";
+import {Link} from "react-router-dom";
 const data = [
     {
         icon: <User className="w-8 h-8 text-purple-600" />,
@@ -42,16 +43,23 @@ export default function ExploreProgram() {
         <section className="w-full bg-gray-50 py-12 px-4">
             <div className="text-center">
                 <img
-                    src="./Gene-Power-Logo.png" // Place ts inside `public/` folder
+                    src="./Gene-Power-Logo.png" 
                     alt="Doctor Illustration"
                     className="mx-auto w-auto h-[65px]"
                 />
                 </div>
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">
-                    🌱 Discover the <span className="text-purple-600">K&H LifestyleRx</span> Program
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800" style={{ fontFamily: "'Tinos', serif" }}>
+                    K&H LifestyleRx Program
                 </h2>
+                <div className="bg-white px-4 py-6 text-gray-800 font-sans mx-auto text-center">
+                    <Link to="/book">
+                        <button className="bg-blue-800 text-white py-2 px-6 rounded-md text-sm font-semibold shadow-md">
+                            Book Now
+                        </button>
+                    </Link>
+                </div>
                 <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10">
                     A science-based, doctor-led program decoding your genetics, biology, and habits into practical changes in 🥗 nutrition, 🏋️‍♀️ fitness, 😴 sleep, 😌 stress, and 💊 supplements.
                 </p>
@@ -59,7 +67,7 @@ export default function ExploreProgram() {
                 {/* Feature Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
                     {data.map((item, idx) => (
-                        <Card key={idx} className="shadow-sm hover:shadow-lg transition-all duration-300">
+                        <Card key={idx} className="shadow-lg hover:shadow-lg transition-all duration-300">
                             <CardContent className="flex flex-col items-center gap-4 p-6 text-center">
                                 {item.icon}
                                 <h4 className="text-lg font-semibold text-gray-800">{item.title}</h4>

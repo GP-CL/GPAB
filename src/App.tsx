@@ -95,7 +95,7 @@ function App() {
             </div>
             {/* <h1 className="text-3xl font-bold text-gray-800">Genepowerx</h1> */}
           </div>
-          <h2 className="text-3xl md:text-4xl  font-bold text-center text-gray-700 mb-6 " style={{ fontFamily: "'Delius', cursive" }}>
+          <h2 className="text-3xl md:text-4xl  font-bold text-center text-gray-700 mb-6 " style={{ fontFamily: "'Tinos', serif" }}>
             K & H LifestyleRx Program
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -104,7 +104,7 @@ function App() {
           </p>
         </div>
          <div className="text-center">
-        <Link to="/explore_program">
+        <Link to="/">
           <button className="mb-2 bg-teal-600 text-white py-2 px-5 rounded-md w-auto font-semibold">
             Go back to Program
           </button>
