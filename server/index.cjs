@@ -20,6 +20,7 @@ const CALENDAR_EMAIL = 'info@khdreamlife.com'; // Doctor's Gmail
 const DOCTOR_EMAIL1= 'kalyan@khdreamlife.com';
 const DOCTOR_EMAIL2 = 'hima@khdreamlife.com';
 const DOCTOR_EMAIL3='chanakya@khdreamlife.com';
+const AASIA_EMAIL="aasia@genepowerx.com";
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
 const TIMEZONE = 'Asia/Kolkata'; // Indian Standard Time
 
@@ -90,7 +91,7 @@ const transporter = nodemailer.createTransport({
 async function sendConfirmationEmail_Doctor(email, name, date, time, appointmentMode) {
   const mailOptions = {
     from: `"GenepoweRx Clinic" <${process.env.EMAIL_USER}>`,
-    to: `${DOCTOR_EMAIL1}, ${DOCTOR_EMAIL2}, ${DOCTOR_EMAIL3}`,
+    to: `${DOCTOR_EMAIL1}, ${DOCTOR_EMAIL2}, ${DOCTOR_EMAIL3}, ${AASIA_EMAIL}`,
     subject: `📅 New Appointment Booked – ${name} on ${date}`,
     html: `
       <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
