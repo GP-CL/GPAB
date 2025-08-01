@@ -170,7 +170,7 @@ function App() {
 
         {/* Footer */}
         <div className="text-center mt-12 text-sm text-gray-500">
-          <p>© 2025 Genepowerx. Available Monday to Friday, 9 AM - 12 PM.</p>
+          <p>© 2025 Genepowerx. Available Monday to Friday, 10 AM - 12 PM and 3 PM - 5 PM.</p>
         </div>
       </div>
     </div>
