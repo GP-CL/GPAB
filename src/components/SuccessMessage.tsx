@@ -109,7 +109,7 @@ export default function SuccessMessage({ bookingData, onNewBooking }: SuccessMes
         </div>
 
         <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 text-left">
-          <h4 className="font-semibold text-green-800 mb-2">SMS Confirmation Sent:</h4>
+          <h4 className="font-semibold text-green-800 mb-2">Email Confirmation Sent:</h4>
           <div className="bg-white rounded p-3 border border-green-200">
             <p className="text-sm text-gray-700 whitespace-pre-line">{bookingData.smsMessage}</p>
           </div>
