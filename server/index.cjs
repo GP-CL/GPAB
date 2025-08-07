@@ -124,7 +124,8 @@ async function sendConfirmationEmail_Doctor(email, name, date, time, appointment
 
         <p>Regards,</p>
         <p><strong>GenepoweRx Admin Team</strong><br/>
-        📍 Suit #2B, Plot No.240, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
+        📍 Suit #2B, Plot No.240, 2nd Floor, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
+        🗺️ https://maps.app.goo.gl/ojakHN3uRuiWDp4fA?g_st=ic <br/>
         📞 +91-95022 22300<br/>
         🔗 <a href="https://genepowerx.com/" target="_blank">https://genepowerx.com</a>
         </p>
@@ -176,7 +177,8 @@ async function sendConfirmationEmail_Patient(email, name, date, time, appointmen
 
         <p>Warm regards,</p>
         <p><strong>GenepoweRx Clinic</strong><br/>
-        📍 Suit # 2B, Plot No.240, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
+        📍 Suit # 2B, Plot No.240, 2nd Floor, Nirvana, Road No. 36, Jawahar Colony, Jubilee Hills, Hyderabad, Telangana 50003<br/>
+        🗺️ https://maps.app.goo.gl/ojakHN3uRuiWDp4fA?g_st=ic <br/>
         📞 +91-95022 22300<br/>
         ⛓️‍💥https://genepowerx.com/
       </div>
@@ -467,3 +469,4 @@ async function startServer() {
 }
 
 startServer();
+
