@@ -57,7 +57,7 @@ export default function SuccessMessage({ bookingData, onNewBooking }: SuccessMes
         
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Booking Confirmed!</h2>
         <p className="text-gray-600 mb-8">
-          Your appointment has been successfully booked. A confirmation message will be sent to your phone number.
+          Your appointment has been successfully booked. A confirmation message will be sent to your email.
         </p>
 
         <div className="bg-gray-50 rounded-lg p-6 mb-8 text-left">
