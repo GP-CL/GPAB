@@ -7,16 +7,25 @@ const cards = [
   {
     image: "./Hima.jpg",
     title: "Dr. Hima Challa",
-    text: "Dr. Hima Challa graduated from Gandhi Medical College and was among the top few in her batch. She specialized in Internal Medicine at St. Joseph Mercy Oakland, Michigan in the United States. She graduated in Medical Genomics from the Ivy league institution of Harvard Medical School . She also holds a master's in nutrition science from the Texas Women University and in integrative medicine from the Arizona University",
+    text: `Dr. Hima Challa graduated from <strong>Gandhi Medical College</strong> and was among the top few in her batch. 
+    She specialized in <strong>Internal Medicine</strong> at <strong>St. Joseph Mercy Oakland, Michigan (USA)</strong>. 
+    She graduated in <strong>Medical Genomics</strong> from the Ivy League institution <strong>Harvard Medical School</strong>. 
+    She also holds a <strong>Master's in Nutrition Science</strong> from <strong>Texas Women’s University</strong> 
+    and a <strong>Master's in Integrative Medicine</strong> from <strong>University of Arizona</strong>.`,
     classn: "w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600",
   },
   {
     image: "./Kalyan.jpg",
     title: "Dr. Kalyan Uppaluri",
-    text: "Dr. Kalyan Uppaluri is the cofounder and the owner of K&H Personalized Medicine Clinic and Research Institute. He did his medical training at the prestigious Gandhi Medical College. He then moved to the United States, where he specialized in Internal Medicine at the McLaren Hospital, Michigan. He also got a degree in Medical Genomics from Ivy league institute, Stanford University and pursued cancer research at Wayne State University, Michigan.",
+    text: `Dr. Kalyan Uppaluri is the cofounder and the owner of <strong>K&H Personalized Medicine Clinic and Research Institute</strong>. 
+    He did his medical training at the prestigious <strong>Gandhi Medical College</strong>. 
+    He then moved to the United States, where he specialized in <strong>Internal Medicine</strong> at <strong>McLaren Hospital, Michigan</strong>. 
+    He also earned a degree in <strong>Medical Genomics</strong> from the Ivy League institute <strong>Stanford University</strong> 
+    and pursued <strong>Cancer Research</strong> at <strong>Wayne State University, Michigan</strong>.`,
     classn: "w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600",
   },
 ];
+
 const WhyGenpowerx = () => {
   const [current, setCurrent] = useState(0);
   const [fade, setFade] = useState(true);
