@@ -115,7 +115,8 @@ const WhyGenpowerx = () => {
               <h3 className="text-xl font-bold text-purple-700 mb-2">
                 {cards[current].title}
               </h3>
-              <p className="text-gray-700">{cards[current].text}</p>
+              <p className="text-gray-700"
+                dangerouslySetInnerHTML={{ __html: cards[current].text }} >{cards[current].text}</p>
             </div>
           </div>
         </div>
