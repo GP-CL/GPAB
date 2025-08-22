@@ -54,6 +54,9 @@ export default function ExploreProgram() {
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800" style={{ fontFamily: "'Tinos', serif" }}>
                     K&H LifestyleRx Program
                 </h2>
+                <h3 className="text-3xl md:text-4xl font-bold text-center text-gray-700" style={{ fontFamily: "'Tinos', serif" }}>
+                Next-Gen Preventive Health Powered by AI & Genomics
+                </h3>
                 <div className="bg-white px-4 py-6 text-gray-800 font-sans mx-auto text-center">
                     <Link to="/book">
                         <button className="bg-blue-800 text-white py-2 px-6 rounded-md text-sm font-semibold shadow-md">
