@@ -3,51 +3,28 @@ import { Lightbulb, Stethoscope, Route } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const cards = [
-  {
-    image: "./Hima.jpg",
-    title: "Dr. Hima Challa",
-    text: `Dr. Hima Challa graduated from <strong>Gandhi Medical College</strong> and was among the top few in her batch. 
-    She specialized in <strong>Internal Medicine</strong> at <strong>St. Joseph Mercy Oakland, Michigan (USA)</strong>. 
-    She graduated in <strong>Medical Genomics</strong> from the Ivy League institution <strong>Harvard Medical School</strong>. 
-    She also holds a <strong>Master's in Nutrition Science</strong> from <strong>Texas Women’s University</strong> 
-    and a <strong>Master's in Integrative Medicine</strong> from <strong>University of Arizona</strong>.`,
-    classn: "w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600",
-  },
-  {
-    image: "./Kalyan.jpg",
-    title: "Dr. Kalyan Uppaluri",
-    text: `Dr. Kalyan Uppaluri is the cofounder and the owner of <strong>K&H Personalized Medicine Clinic and Research Institute</strong>. 
-    He did his medical training at the prestigious <strong>Gandhi Medical College</strong>. 
-    He then moved to the United States, where he specialized in <strong>Internal Medicine</strong> at <strong>McLaren Hospital, Michigan</strong>. 
-    He also earned a degree in <strong>Medical Genomics</strong> from the Ivy League institute <strong>Stanford University</strong> 
-    and pursued <strong>Cancer Research</strong> at <strong>Wayne State University, Michigan</strong>.`,
-    classn: "w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600",
-  },
-];
-
 const WhyGenpowerx = () => {
-  const [current, setCurrent] = useState(0);
+  const [currentDoctor, setCurrentDoctor] = useState(0);
   const [fade, setFade] = useState(true);
   
-  const nextCard = () => {
+  const nextDoctor = () => {
     setFade(false);
     setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % cards.length);
+      setCurrentDoctor((prev) => (prev + 1) % 2); // Only 2 doctors
       setFade(true);
     }, 200);
   };
 
-  const prevCard = () => {
+  const prevDoctor = () => {
     setFade(false);
     setTimeout(() => {
-      setCurrent((prev) => (prev - 1 + cards.length) % cards.length);
+      setCurrentDoctor((prev) => (prev - 1 + 2) % 2); // Only 2 doctors
       setFade(true);
     }, 200);
   };
 
   useEffect(() => {
-    const timer = setInterval(nextCard, 5000); // autoplay every 5s
+    const timer = setInterval(nextDoctor, 5000); // autoplay every 5s
     return () => clearInterval(timer);
   }, []);
 
@@ -96,40 +73,74 @@ const WhyGenpowerx = () => {
         </div>
       </div>
 
-      {/* Carousel */}
+      {/* Meet Doctors Section */}
       <h2 className="mt-3 text-3xl font-bold text-center text-purple-800 mb-6">
         ✨ Meet Doctors ✨
       </h2>
+      
       <div className="w-full max-w-xl mx-auto mt-10">
-        <div className="overflow-hidden bg-white rounded-xl shadow-xl transition-opacity duration-500">
+        <div className="overflow-hidden bg-white rounded-xl shadow-xl">
           <div
             className={`transition-opacity duration-500 ease-in-out ${fade ? "opacity-100" : "opacity-0"
               }`}
           >
-            <img
-              src={cards[current].image}
-              alt={cards[current].title}
-              className={cards[current].classn}
-            />
-            <div className="p-5 text-center">
-              <h3 className="text-xl font-bold text-purple-700 mb-2">
-                {cards[current].title}
-              </h3>
-              <p className="text-gray-700"
-                dangerouslySetInnerHTML={{ __html: cards[current].text }} ></p>
-            </div>
+            {/* Dr. Hima Challa */}
+            {currentDoctor === 0 && (
+              <div>
+                <img
+                  src="./Hima.jpg"
+                  alt="Dr. Hima Challa"
+                  className="w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600"
+                />
+                <div className="p-5 text-center">
+                  <h3 className="text-xl font-bold text-purple-700 mb-2">
+                    Dr. Hima Challa
+                  </h3>
+                  <p className="text-gray-700">
+                    Dr. Hima Challa graduated from <strong>Gandhi Medical College</strong> and was among the top few in her batch. 
+                    She specialized in <strong>Internal Medicine</strong> at <strong>St. Joseph Mercy Oakland, Michigan (USA)</strong>. 
+                    She graduated in <strong>Medical Genomics</strong> from the Ivy League institution <strong>Harvard Medical School</strong>. 
+                    She also holds a <strong>Master's in Nutrition Science</strong> from <strong>Texas Women's University</strong> 
+                    and a <strong>Master's in Integrative Medicine</strong> from <strong>University of Arizona</strong>.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Dr. Kalyan Uppaluri */}
+            {currentDoctor === 1 && (
+              <div>
+                <img
+                  src="./Kalyan.jpg"
+                  alt="Dr. Kalyan Uppaluri"
+                  className="w-auto h-[240px] mx-auto rounded-full object-cover border-4 border-brown-600"
+                />
+                <div className="p-5 text-center">
+                  <h3 className="text-xl font-bold text-purple-700 mb-2">
+                    Dr. Kalyan Uppaluri
+                  </h3>
+                  <p className="text-gray-700">
+                    Dr. Kalyan Uppaluri is the cofounder and the owner of <strong>K&H Personalized Medicine Clinic and Research Institute</strong>. 
+                    He did his medical training at the prestigious <strong>Gandhi Medical College</strong>. 
+                    He then moved to the United States, where he specialized in <strong>Internal Medicine</strong> at <strong>McLaren Hospital, Michigan</strong>. 
+                    He also earned a degree in <strong>Medical Genomics</strong> from the Ivy League institute <strong>Stanford University</strong> 
+                    and pursued <strong>Cancer Research</strong> at <strong>Wayne State University, Michigan</strong>.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
         <div className="flex justify-center gap-4 mt-4">
           <button
-            onClick={prevCard}
+            onClick={prevDoctor}
             className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600"
           >
             ← Prev
           </button>
           <button
-            onClick={nextCard}
+            onClick={nextDoctor}
             className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600"
           >
             Next →
